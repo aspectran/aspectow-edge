@@ -13,7 +13,7 @@ context: {
     rules: [
         /config/app-description.xml
         /config/aspectran-rules.xml
-        /config/server/netty-server.xml
+        /config/server/server.xml
     ]
     resources: [
         /lib/ext
@@ -29,7 +29,7 @@ context: {
     autoReload: {
         reloadMode: hard
         scanIntervalSeconds: 5
-        enabled: true
+        enabled: false
     }
     singleton: true
 }
