@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{templates/default}">
+<th:block layout:fragment="content">
+    <style>
+        .card {
+            transition: transform 0.2s ease-in-out;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        .card-header a {
+            color: inherit;
+            text-decoration: none;
+        }
+        .card img {
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 0;
+        }
+    </style>
+    <h1 class="display-5 mt-5">Aspectow Edge Edition</h1>
+    <p class="lead">A lightweight, ultra-fast non-servlet runtime platform powered by Netty and Java 21 Virtual Threads, optimized for microservices and REST APIs.</p>
+    <p>This is the main screen of the starter project. Below you can see a list of sample applications that you can develop with Aspectow.</p>
+    <h2 class="mt-5">Demo List</h2>
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4 pt-4">
+        <div class="col">
+            <div class="card h-100 shadow-sm">
+                <a class="d-none d-md-block" href="https://jpetstore.aspectran.com/"
+                   title="JPetStore is a full-stack sample web application built on top of MyBatis 3, Aspectran 9."><img src="https://aspectran.com/images/projects/jpetstore.png" class="img-fluid"/></a>
+                <div class="card-header">
+                    <a href="https://jpetstore.aspectran.com/">JPetStore Demo</a>
+                </div>
+                <div class="card-body">
+                    <p class="card-text">The goal of the JPetStore Demo App is to provide and demonstrate a sample web application that leverages Aspectran and MyBatis. </p>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card h-100 shadow-sm">
+                <a class="d-none d-md-block" href="https://petclinic.aspectran.com/"
+                   title="PetClinic is a full-stack sample web application built on top Aspectran 9."><img src="https://aspectran.com/images/projects/petclinic.png" class="img-fluid"/></a>
+                <div class="card-header">
+                    <a href="https://petclinic.aspectran.com/">PetClinic Demo</a>
+                </div>
+                <div class="card-body">
+                    <p class="card-text">The goal of the PetClinic Demo App is to provide and demonstrate a sample web application that leverages Aspectran and JPA. </p>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card h-100 shadow-sm">
+                <a class="d-none d-md-block" href="https://demo.aspectran.com/"
+                   title="Aspectran Examples"><img src="https://aspectran.com/images/projects/aspectran-demo.png" class="img-fluid"/></a>
+                <div class="card-header">
+                    <a href="https://demo.aspectran.com/">Aspectran Examples</a>
+                </div>
+                <div class="card-body">
+                    <p class="card-text">The goal of the PetClinic Demo App is to provide and demonstrate a sample web application that leverages Aspectran and JPA.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card h-100 shadow-sm">
+                <a class="d-none d-md-block" href="https://public.aspectran.com/monitoring/" title="View logs with AppMon"><img src="https://aspectran.com/images/projects/aspectow-appmon.png" class="img-fluid"/></a>
+                <div class="card-header">
+                    <a href="https://public.aspectran.com/monitoring/">Aspectow AppMon</a>
+                </div>
+                <div class="card-body">
+                    <p class="card-text">Aspectow AppMon is a lightweight, real-time application monitoring engine integrated into Aspectow Console, providing live metrics, request tracing, and log streaming.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</th:block>>
