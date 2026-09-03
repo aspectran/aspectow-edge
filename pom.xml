@@ -60,6 +60,7 @@
 
         <aspectran.version>9.7.0-SNAPSHOT</aspectran.version>
         <aspectow.version>4.1.3-SNAPSHOT</aspectow.version>
+        <netty.version>4.2.17.Final</netty.version>
     </properties>
 
     <dependencies>
@@ -83,12 +84,44 @@
             <artifactId>aspectran-with-netty</artifactId>
             <version>${aspectran.version}</version>
         </dependency>
+        <!--
+            Netty native transport dependencies (optional).
+            Aspectran Netty Server automatically selects the best available transport:
+            1. Epoll (Linux) -> 2. KQueue (macOS) -> 3. Standard NIO (Fallback / Windows)
+
+            Uncomment or adjust the dependency matching your target platform:
+            - Linux (x86_64): default below
+            - Linux (ARM64): netty-transport-native-epoll with classifier linux-aarch_64
+            - macOS (Apple Silicon): netty-transport-native-kqueue with classifier osx-aarch_64
+            - macOS (Intel): netty-transport-native-kqueue with classifier osx-x86_64
+            - Windows / Other: No native dependency required (automatically falls back to Java NIO)
+        -->
         <dependency>
             <groupId>io.netty</groupId>
             <artifactId>netty-transport-native-epoll</artifactId>
-            <version>4.2.16.Final</version>
+            <version>${netty.version}</version>
             <classifier>linux-x86_64</classifier>
         </dependency>
+        <!--
+        <dependency>
+            <groupId>io.netty</groupId>
+            <artifactId>netty-transport-native-epoll</artifactId>
+            <version>${netty.version}</version>
+            <classifier>linux-aarch_64</classifier>
+        </dependency>
+        <dependency>
+            <groupId>io.netty</groupId>
+            <artifactId>netty-transport-native-kqueue</artifactId>
+            <version>${netty.version}</version>
+            <classifier>osx-aarch_64</classifier>
+        </dependency>
+        <dependency>
+            <groupId>io.netty</groupId>
+            <artifactId>netty-transport-native-kqueue</artifactId>
+            <version>${netty.version}</version>
+            <classifier>osx-x86_64</classifier>
+        </dependency>
+        -->
         <dependency>
             <groupId>com.aspectran</groupId>
             <artifactId>aspectran-with-thymeleaf</artifactId>

@@ -7,6 +7,6 @@
         Aspectran configuration for setting up a Netty context.
     </description>
 
-    <append resource="com.aspectran.aspectow.console.config.rules.context.netty-context-console.xml"/>
+    <append resource="com/aspectran/aspectow/console/config/rules/context/netty-context-console.xml"/>
 
 </aspectran>

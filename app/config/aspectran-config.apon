@@ -18,6 +18,7 @@ system: {
     }
 }
 context: {
+    name: root
     rules: [
         /config/app-description.xml
         /config/aspectran-rules.xml

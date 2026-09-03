@@ -25,6 +25,7 @@
         </property>
         <property name="contexts" type="array">
             <value>#{netty.context.root}</value>
+            <value>#{netty.context.console}</value>
         </property>
     </bean>
 
