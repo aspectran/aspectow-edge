@@ -16,7 +16,6 @@
         <property name="virtualThreads" valueType="boolean">true</property>
         <property name="accessLogHandler">#{netty.server.handler.accessLogHandler}</property>
         <property name="encodingHandler">#{netty.server.handler.encodingHandler}</property>
-        <property name="webSocketConfig">#{netty.server.webSocketConfig}</property>
         <property name="listeners" type="array">
             <bean class="com.aspectran.netty.server.NettyListenerConfig">
                 <property name="port" valueType="int">%{netty.server.listener.http.port}</property>
@@ -62,14 +61,6 @@
                 </property>
             </bean>
         </property>
-    </bean>
-
-    <bean id="netty.server.webSocketConfig"
-          class="com.aspectran.netty.server.websocket.NettyWebSocketConfig"
-          scope="prototype">
-        <property name="maxFramePayloadLength" valueType="int">65536</property>
-        <property name="maxMessageSize" valueType="int">1048576</property>
-        <property name="allowExtensions" valueType="boolean">true</property>
     </bean>
 
 </aspectran>

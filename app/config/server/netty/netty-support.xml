@@ -3,8 +3,8 @@
         "https://aspectran.com/dtd/aspectran-9.dtd">
 <aspectran>
 
-<!--    <bean class="com.aspectran.aspectow.console.cluster.support.TowServerPortProvider">-->
-<!--        <argument>tow.server</argument>-->
-<!--    </bean>-->
+    <bean class="com.aspectran.aspectow.console.cluster.support.NettyServerPortProvider">
+        <argument>netty.server</argument>
+    </bean>
 
 </aspectran>
