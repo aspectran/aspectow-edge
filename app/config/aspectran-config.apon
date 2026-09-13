@@ -138,6 +138,7 @@ daemon: {
 web: {
     uriDecoding: utf-8
     trailingSlashRedirect: true
+    proxyAddressForwarding: false
     acceptable: {
         +: /**
     }
